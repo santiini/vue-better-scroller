@@ -8,7 +8,7 @@
 	"main": "dist/vue-better-scroller.js",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/santiini/vue-better-scroller.git"
 	},
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
