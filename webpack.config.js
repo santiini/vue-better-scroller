@@ -2,9 +2,9 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-	entry: './src/main.js',
+	// entry: './src/main.js',  // 开发使用;
 	// 因为我们要打包的插件在lib里面 所以稍稍改一下
-  // entry: './src/lib/index.js',
+  entry: './src/lib/index.js', // 生产中使用;
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -35,13 +35,22 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[name].[ext]?[hash]'
+      //   }
+			// },
+			// 把小图片转化为base64形式;
+			{
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
         options: {
-          name: '[name].[ext]?[hash]'
+          limit: 10000,
+          name: '[name].[hash:7].[ext]'
         }
-      }
+      },
     ]
   },
   resolve: {

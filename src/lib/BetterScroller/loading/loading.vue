@@ -1,6 +1,6 @@
 <template>
   <div class="mf-loading-container">
-    <img src="./loading.gif">
+    <img :src="require('../../../assets/loading.gif')">
   </div>
 </template>
 <script type="text/ecmascript-6">

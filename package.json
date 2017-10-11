@@ -1,15 +1,15 @@
 {
   "name": "vue-better-scroll",
   "description": "a vue scroll component width better-scroll",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "author": "惊鸦 <506755679@qq.com>",
-	"private": false,
-	"license": "MIT",
-	"main": "dist/vue-better-scroller.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/santiini/vue-better-scroller.git"
-	},
+  "private": false,
+  "license": "MIT",
+  "main": "dist/vue-better-scroller.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiini/vue-better-scroller.git"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
@@ -29,6 +29,7 @@
     "sass-loader": "^5.0.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "url-loader": "^0.5.9",
     "vue-loader": "^12.1.0",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
